@@ -1,9 +1,14 @@
 package org.fastframework.mvc;
 
+import java.lang.reflect.Method;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
+import org.fast.framework.core.util.ClassUtil;
 import org.fastframework.core.Config;
-import org.fastframework.core.util.ClassUtil;
 import org.fastframework.mvc.annotation.Controller;
 import org.fastframework.mvc.annotation.RequestMapping;
 import org.fastframework.mvc.annotation.RequestMethod;
@@ -11,11 +16,6 @@ import org.fastframework.mvc.bean.RequestBody;
 import org.fastframework.mvc.method.HandlerMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.lang.reflect.Method;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Controller类收集器

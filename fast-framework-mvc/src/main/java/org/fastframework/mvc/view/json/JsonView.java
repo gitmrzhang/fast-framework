@@ -6,8 +6,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.fast.framework.core.util.JSONUtil;
 import org.fastframework.mvc.view.AbstractView;
-import org.fastframework.util.JSONUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,4 +1,4 @@
-package org.fastframework.util;
+package org.fast.framework.core.util;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

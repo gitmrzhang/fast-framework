@@ -32,8 +32,80 @@
 	</developers>
 
 	<properties>
-		<compiler-version>1.8</compiler-version>
+		<compiler.version>1.8</compiler.version>
+		<cglib.version>3.1</cglib.version>
+		<junit.version>4.12</junit.version>
+		<jackson.version>1.9.13</jackson.version>
+		<slf4j.version>1.7.7</slf4j.version>
+		<servlet.version>3.1.0</servlet.version>
+		<commons-lang.version>3.4</commons-lang.version>
+		<commons-collections.version>3.2.2</commons-collections.version>
+		<poi.version>3.9</poi.version>
+		<fast-framework.version>0.0.1</fast-framework.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- apche poi -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+
+			<!-- Servlet3.0 -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet.version}</version>
+			</dependency>
+
+			<!-- SLF4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<!--=======工具类======= -->
+			<!-- Jackson -->
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-jaxrs</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<!-- Apache Commons -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>${commons-collections.version}</version>
+			</dependency>
+
+			<!-- JUnit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+			<!-- CGLib -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -41,8 +113,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>${compiler-version}</source>
-					<target>${compiler-version}</target>
+					<source>${compiler.version}</source>
+					<target>${compiler.version}</target>
 				</configuration>
 			</plugin>
 			<plugin>

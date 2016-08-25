@@ -2,7 +2,8 @@ package org.fastframework.mvc.method;
 
 import java.lang.reflect.Method;
 
-import org.fastframework.util.Assert;
+import org.fast.framework.core.util.Assert;
+
 
 public class HandlerMethod {
 	

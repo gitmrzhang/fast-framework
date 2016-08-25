@@ -1,4 +1,4 @@
-package org.fastframework.core.util;
+package org.fast.framework.core.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -37,7 +37,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fast.version>0.0.1</fast.version>
     </properties>
 
     <dependencies>
@@ -46,7 +45,7 @@
         <dependency>
             <groupId>org.fast</groupId>
             <artifactId>fast-framework-mvc</artifactId>
-            <version>${fast.version}</version>
+            <version>${fast-framework.version}</version>
         </dependency>
 
     </dependencies>

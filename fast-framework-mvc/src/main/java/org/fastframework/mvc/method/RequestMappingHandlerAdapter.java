@@ -7,10 +7,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.fast.framework.core.util.ReflectUtil;
 import org.fastframework.mvc.ModelAndView;
 import org.fastframework.mvc.annotation.ResponseBody;
 import org.fastframework.mvc.view.json.JsonView;
-import org.fastframework.util.ReflectUtil;
 import org.fastframework.util.WebUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

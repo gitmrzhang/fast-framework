@@ -1,4 +1,4 @@
-package org.fastframework.util;
+package org.fast.framework.core.util;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
