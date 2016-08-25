@@ -20,6 +20,8 @@ public class InternalResourceView extends AbstractUrlBasedView {
 	@Override
 	protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
+		//将mode数据放入到 request.Attributes
+		exposeModelAsRequestAttributes(model,request);
 		String dispatcherPath = getUrl();
 		RequestDispatcher rd = getRequestDispatcher(request, dispatcherPath);
 		if (rd == null) {
@@ -28,6 +30,21 @@ public class InternalResourceView extends AbstractUrlBasedView {
 		}
 		rd.forward(request, response);
 		return;
+	}
+	
+	protected void exposeModelAsRequestAttributes(Map<String, Object> model,HttpServletRequest request){
+		if(model == null){
+			return;
+		}
+		for(Map.Entry<String, Object> entry : model.entrySet()){
+			String modelName = entry.getKey();
+			Object modelValue = entry.getValue();
+			if(modelValue != null){
+				request.setAttribute(modelName, modelValue);
+			}else{
+				request.removeAttribute(modelName);
+			}
+		}
 	}
 
 	protected RequestDispatcher getRequestDispatcher(HttpServletRequest request, String dispatcherPath) {

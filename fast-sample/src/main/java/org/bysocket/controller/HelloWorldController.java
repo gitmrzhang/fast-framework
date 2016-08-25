@@ -45,9 +45,11 @@ public class HelloWorldController {
 	
 	@RequestMapping(value = "/page",
 			method = RequestMethod.GET)
-	public String helloWorld() {
-		
-		return "/WEB-INF/jsp/hello.jsp";
+	public ModelAndView helloWorld(String name) {
+		ModelAndView model  = new ModelAndView();
+		model.addObject("name", name);
+		model.setViewName("/WEB-INF/jsp/hello.jsp");
+		return model;
 	}
 
 }

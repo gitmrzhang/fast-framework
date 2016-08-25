@@ -1,5 +1,6 @@
 package org.fastframework.mvc;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class ModelAndView {
@@ -7,6 +8,10 @@ public class ModelAndView {
 	private Object view;
 
 	private Map<String, Object> model;
+	
+	public ModelAndView(){
+		
+	}
 
 	public ModelAndView(View view, Map<String, Object> model) {
 		this.view = view;
@@ -42,6 +47,9 @@ public class ModelAndView {
 	}
 
 	public Map<String, Object> getModel() {
+		if(this.model == null){
+			this.model = new HashMap<String, Object>();
+		}
 		return this.model;
 	}
 
@@ -52,5 +60,9 @@ public class ModelAndView {
 	public Map<String, Object> getModelInternal() {
 		return this.model;
 	}
-
+	
+	public void addObject(String attributeName,Object attributeValue){
+		getModel().put(attributeName, attributeValue);
+	}
+	
 }

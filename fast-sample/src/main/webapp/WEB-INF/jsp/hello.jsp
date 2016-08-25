@@ -8,5 +8,7 @@
 </head>
 <body>
 	<a href = "www.baidu.com">百度</a>  
+	<br/>
+	<span>hello ${name}</span>
 </body>
 </html>
