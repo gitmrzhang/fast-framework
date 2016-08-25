@@ -10,8 +10,8 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>fast-sample</artifactId>
-    <name>fast-sample</name>
+    <artifactId>fast-framework-sample</artifactId>
+    <name>fast-framework-sample</name>
     <packaging>war</packaging>
     <url>http://www.bysocket.com</url>
     <description>fast framework core</description>
@@ -45,7 +45,7 @@
         <!-- Fast Framework -->
         <dependency>
             <groupId>org.fast</groupId>
-            <artifactId>fast-core</artifactId>
+            <artifactId>fast-framework-mvc</artifactId>
             <version>${fast.version}</version>
         </dependency>
 

@@ -22,8 +22,8 @@
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>fast-core</artifactId>
-	<name>fast-core</name>
+	<artifactId>fast-framework-mvc</artifactId>
+	<name>fast-framework-mvc</name>
 	<url>http://www.bysocket.com</url>
 	<description>fast framework core</description>
 
